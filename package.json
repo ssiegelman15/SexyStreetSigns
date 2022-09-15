@@ -1,21 +1,23 @@
 {
-  "name": "sexy-street-signs",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "name": "sexy_street_signs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ssiegelman15/Sexy_Street_Signs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ssiegelman15/Sexy_Street_Signs/issues"
+  },
+  "homepage": "https://github.com/ssiegelman15/Sexy_Street_Signs#readme",
   "dependencies": {
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  },
-  "devDependencies": {
-    "@types/react": "^18.0.17",
-    "@types/react-dom": "^18.0.6",
-    "@vitejs/plugin-react": "^2.1.0",
-    "vite": "^3.1.0"
+    "concurrently": "^7.3.0"
   }
 }
