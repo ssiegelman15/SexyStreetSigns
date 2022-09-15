@@ -1,23 +1,27 @@
 {
-  "name": "sexy_street_signs",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ssiegelman15/Sexy_Street_Signs.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ssiegelman15/Sexy_Street_Signs/issues"
-  },
-  "homepage": "https://github.com/ssiegelman15/Sexy_Street_Signs#readme",
-  "dependencies": {
-    "concurrently": "^7.3.0"
-  }
+	"name": "sexy_street_signs",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"start": "node server/server.js",
+		"develop": "concurrently \"cd server && npm run watch\" \"cd client && npm run dev\"",
+		"install": "cd server && npm i && cd ../client && npm i",
+		"build": "cd client && npm run build"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ssiegelman15/Sexy_Street_Signs.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/ssiegelman15/Sexy_Street_Signs/issues"
+	},
+	"homepage": "https://github.com/ssiegelman15/Sexy_Street_Signs#readme",
+	"dependencies": {
+		"concurrently": "^7.3.0"
+	}
 }
