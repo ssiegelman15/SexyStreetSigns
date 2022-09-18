@@ -19,7 +19,25 @@ const typeDefs = gql`
     carType: String
   }
 
+  input inputVehicle {
+    name: String
+    make: String
+    model: String
+    mpg: Int
+    color: String
+    carType: String
+  }
+
   type Destination {
+    location: String
+    city: String
+    streetAddress: String
+    zipcode: Int
+    state: String
+    fullAddress: String
+  }
+
+  input inputDestination {
     location: String
     city: String
     streetAddress: String
@@ -42,6 +60,8 @@ const typeDefs = gql`
   type Mutation {
     addUser(username: String!, email: String!, password: String!): Auth
     login(email: String!, password: String!): Auth
+    vehicleInfo(vehicle: inputVehicle!): User
+    destinations(destination: inputDestination!): User
   }
 `;
 
