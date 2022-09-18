@@ -56,6 +56,40 @@ const resolvers = {
 
       return { token, user };
     },
+
+    // Save vehicle
+    vehicleInfo: async (parent, { vehicle }, context) => {
+      if (context.user) {
+        return User.findOneAndUpdate(
+          { _id: context.user._id },
+          {
+            $addToSet: {
+              vehicleInfo: vehicle,
+            },
+          },
+          {
+            new: true,
+          }
+        );
+      }
+    },
+
+    // Save destination
+    destinations: async (parent, { destination }, context) => {
+      if (context.user) {
+        return User.findOneAndUpdate(
+          { _id: context.user._id },
+          {
+            $addToSet: {
+              destinations: destination,
+            },
+          },
+          {
+            new: true,
+          }
+        );
+      }
+    },
   },
 };
 
